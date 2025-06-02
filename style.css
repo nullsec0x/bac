@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: rgb(144, 238, 144);
+  --input-border: #cccccc;
+  --input-focus-border: #666666;
+  --error-color: #ff4d4d;
+  --card-bg: #ffffff;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Patrick Hand', cursive;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem;
+  direction: rtl;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.toggles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+label span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+}
+
+input:focus, select:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+}
+
+button {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Patrick Hand', cursive;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: var(--input-focus-border);
+}
+
+#result, #result2Bac {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: var(--bg-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.download-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--input-focus-border);
+    font-family: 'Schoolbell', cursive;
+}
+
+footer .heart {
+    color: #ff0000; 
+    font-family: 'Schoolbell', cursive;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --input-border: #444444;
+  --input-focus-border: #888888;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .app {
+    padding: 1.5rem;
+  }
+}
+
+#exportBtn, #export2Btn {
+    width: 100%; 
+    padding: 0.75rem 1.5rem; 
+    margin: 0.5rem auto;
+    display: block;
+    font-size: 1rem;
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    border: 1px solid var(--input-border);
+    border-radius: 5px; }
+
+body.dark #exportBtn,
+
+body.dark #export2Btn {
+    background-color: var(--text-color); 
+    color: var(--bg-color);  }
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+#result, #result2Bac {
+    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    color: var(--error-color);
+    margin: 0.5rem 0;
+    text-align: center;
+    font-size: 1rem;
+  }

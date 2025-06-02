@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>حساب معدل الباك / Calculateur du Bac</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div class="app">
+    <div class="toggles">
+      <button id="langToggle" aria-label="Toggle Language">🇫🇷 Français</button>
+      <button id="themeToggle" aria-label="Toggle Theme">🌙 Dark</button>
+    </div>
+
+    <!-- National Exam Section -->
+    <section id="calcNationalSection">
+      <h1 id="title">حساب معدل الوطني</h1>
+      <form id="bacForm" novalidate>
+        <label for="filiere" id="filiereLabel">الشعبة:</label>
+        <select id="filiere" name="filiere" aria-labelledby="filiereLabel"></select>
+        <div id="inputs"></div>
+        <button type="submit" id="calcBtn">احسب</button>
+        <div class="result-container">
+          <p id="error" class="error-message" role="alert" aria-live="polite"></p>
+          <p id="result" role="alert" aria-live="polite"></p>
+          <button type="button" id="exportBtn" class="export-button">📄 تحميل النتائج</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 2ème Bac Section -->
+    <section id="calc2BacSection">
+      <h1 id="title2Bac">حساب معدل الثانية بكالوريا</h1>
+      <form id="bac2Form" novalidate>
+        <div id="bac2Inputs">
+          <div class="input-group">
+            <label id="labelSemester1">
+              <span>معدل الدورة الأولى</span>
+              <input type="text" name="semester1" required autocomplete="off" />
+            </label>
+          </div>
+          <div class="input-group">
+            <label id="labelSemester2">
+              <span>معدل الدورة الثانية</span>
+              <input type="text" name="semester2" required autocomplete="off" />
+            </label>
+          </div>
+          <div class="input-group">
+            <label id="labelRegional">
+              <span>معدل الإمتحان الجهوي</span>
+              <input type="text" name="regional" required autocomplete="off" />
+            </label>
+          </div>
+          <div class="input-group">
+            <label id="labelNational">
+              <span>معدل الإمتحان الوطني</span>
+              <input type="text" name="national" required autocomplete="off" />
+            </label>
+          </div>
+        </div>
+        <button type="submit" id="calc2Btn">احسب</button>
+        <div class="result-container">
+          <p id="error2Bac" class="error-message" role="alert" aria-live="polite"></p>
+          <p id="result2Bac" role="alert" aria-live="polite"></p>
+          <button type="button" id="export2Btn" class="export-button">📄 تحميل النتائج</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    Made by Omar with luv <span class="heart"><3</span>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="bac2calc.js"></script>
+</body>
+</html>
