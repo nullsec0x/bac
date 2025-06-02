@@ -208,7 +208,10 @@ function updateUI() {
         title2Bac.style.marginBottom = "1.5rem";
     }
     
-    if (langToggle) langToggle.textContent = currentLang === "ar" ? t.langToggleText : translations["ar"].langToggleText;
+if (langToggle) {
+    const nextLang = currentLang === "ar" ? "fr" : "ar";
+    langToggle.textContent = translations[nextLang].langToggleText;
+}
     if (themeToggle) themeToggle.textContent = currentTheme === "dark" ? t.themeLight : t.themeDark;
     
     renderInputs(currentFiliere);
